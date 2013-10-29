@@ -1,4 +1,4 @@
-package example.contrived.spring.javaonly;
+package spring.config.javaonly;
 
 import example.contrived.nonanotated.api.Broker;
 import example.contrived.nonanotated.api.Matcher;

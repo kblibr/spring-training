@@ -1,10 +1,9 @@
-package example.contrived.spring.xml;
+package spring.config.javaonly;
 
 import example.contrived.nonanotated.api.Broker;
 import example.contrived.nonanotated.schema.MatchResult;
 import example.contrived.nonanotated.schema.SearchRequest;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
  * User: bryant.larsen
@@ -12,7 +11,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
 
   public static void main(String[] args){
-    ApplicationContext context = new ClassPathXmlApplicationContext("/example/contrived/spring/xml/applicationContext.xml");
+    AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+    context.register(SpringConfig.class);
+    context.refresh();
+
     Broker broker = context.getBean(Broker.class);
     broker.doMatch(new MatchResult());
     broker.doSearch(new SearchRequest());

@@ -1,4 +1,4 @@
-package example.contrived.spring.mixed;
+package spring.config.mixed;
 
 import example.contrived.anotated.api.Feeder;
 import example.contrived.anotated.schema.UpdateRequest;
@@ -11,7 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
 
   public static void main(String[] args) {
-    ApplicationContext context = new ClassPathXmlApplicationContext("/example/contrived/spring/mixed/applicationContext.xml");
+    ApplicationContext context = new ClassPathXmlApplicationContext("/spring/config/mixed/applicationContext.xml");
     Feeder feeder = context.getBean(Feeder.class);
     feeder.doFeed(new UpdateRequest());
   }

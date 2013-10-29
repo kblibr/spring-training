@@ -1,10 +1,7 @@
-package example.contrived.spring.anotationsOnly;
+package spring.config.anotationsOnly;
 
 import example.contrived.anotated.api.Feeder;
 import example.contrived.anotated.schema.UpdateRequest;
-import example.contrived.nonanotated.api.Broker;
-import example.contrived.nonanotated.schema.MatchResult;
-import example.contrived.nonanotated.schema.SearchRequest;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

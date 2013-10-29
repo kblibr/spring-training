@@ -1,4 +1,4 @@
-package example.contrived.spring.anotationsOnly;
+package spring.config.anotationsOnly;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
