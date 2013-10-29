@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+  <bean name="searcher" class="example.contrived.nonanotated.impl.SearcherImpl"/>
+  <bean name="matcher" class="example.contrived.nonanotated.impl.MatcherImpl"/>
+
+  <bean class="example.contrived.nonanotated.impl.BrokerImpl">
+    <constructor-arg ref="matcher"/>
+    <constructor-arg ref="searcher"/>
+  </bean>
+
+  </beans>
