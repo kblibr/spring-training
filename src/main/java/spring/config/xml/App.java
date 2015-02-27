@@ -12,7 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
 
   public static void main(String[] args){
-    ApplicationContext context = new ClassPathXmlApplicationContext("/spring/config/xml/applicationContext.xml");
+    ApplicationContext context = new ClassPathXmlApplicationContext("/spring/config/xml/appCtx.xml");
     Broker broker = context.getBean(Broker.class);
     broker.doMatch(new MatchResult());
     broker.doSearch(new SearchRequest());

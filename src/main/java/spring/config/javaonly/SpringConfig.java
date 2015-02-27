@@ -16,15 +16,17 @@ import org.springframework.context.annotation.Configuration;
 public class SpringConfig {
 
   @Bean
-  public Broker getBroker(){
-    return new BrokerImpl(getMatcher(), getSearcher());
+  public Broker getBroker(Searcher searcher, Matcher matcher){
+    return new BrokerImpl(matcher, searcher);
   }
 
-  private Searcher getSearcher() {
+  @Bean
+  public Searcher getSearcher() {
     return new SearcherImpl();
   }
 
-  private Matcher getMatcher() {
+  @Bean
+  public  Matcher getMatcher() {
     return new MatcherImpl();
   }
 }

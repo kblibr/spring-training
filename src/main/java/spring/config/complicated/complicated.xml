@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+  <bean id="hello" name="heyThere sup howdy dude" class="java.lang.String">
+    <constructor-arg value="This is your welcome message"/>
+  </bean>
+
+  <bean id="nameStandardizer" class="example.contrived.complicated.thirdparty.NameStandardizer" factory-method="createNameStandardizer">
+    <constructor-arg>
+      <list>
+        <value>Bryant</value>
+        <ref bean="heyThere" />
+        <idref bean="hello" />
+      </list>
+    </constructor-arg>
+  </bean>
+</beans>

@@ -22,7 +22,7 @@ public class StandardsWorkhorse {
     this.locations = locations;
   }
 
-  public void setMaxLength(short maxLength) {
+  public void setMaxLength(int maxLength) {
     this.maxLength = maxLength;
   }
 

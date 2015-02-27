@@ -14,14 +14,8 @@ import java.util.List;
  */
 @Component
 public class FeederImpl implements Feeder {
-
-  private final Updater updater;
-
   @Autowired
-  public FeederImpl(Updater updater) {
-    System.out.println("In the constructor of FeederImpl");
-    this.updater = updater;
-  }
+  private Updater updater;
 
   @Override
   public List<UpdateResponse> doFeed(UpdateRequest request) {
